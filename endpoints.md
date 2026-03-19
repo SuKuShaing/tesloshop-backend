@@ -46,13 +46,6 @@ Authorization: Bearer ${token}
 
 ## Data Management
 
-### 4. Seed Database
-**Endpoint:** `GET /api/seed`
-
-**Description:** Crea los primeros usuarios de ejemplo en la base de datos.
-
----
-
 ## Obtener Productos
 **Endpoint:** `GET /api/products`
 
@@ -78,6 +71,32 @@ Esta url retornará los productos del 21 al 40.
 localhost:3000/api/products/b68113a4-bb6d-48f7-b45e-04210cca57a3
 
 Esta url retornará el producto con el ID `b68113a4-bb6d-48f7-b45e-04210cca57a3`.
+
+---
+
+## Cargar Imagen de Producto
+**Endpoint:** `POST /api/files/product`
+
+**Descripción:** Permite subir una imagen para un producto específico. La imagen se asocia al producto mediante su ID.
+
+**Body:** Form-Data (solo form en Thunder Client)  con el campo `file` y la dirección de la imagen a subir.
+sí todo está correcto, la imagen se subirá y retornará un id-img.png.
+
+---
+
+## Obtener Imagen de Producto
+**Endpoint:** `GET /api/files/product/:id`
+
+**Descripción:** Permite obtener la imagen de un producto específico mediante su ID.
+
+---
+
+## User Management
+
+### 4. Seed Database
+**Endpoint:** `GET /api/seed`
+
+**Description:** Crea los primeros usuarios de ejemplo en la base de datos.
 
 ---
 
